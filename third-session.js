@@ -1,29 +1,24 @@
 // ejercicio 6
-function dividir(num1, num2) {
-    if (num1 === 0) {
-        return 'No se puede dividir por 0';
-    }
-    else {
-        return num2 / num1;
-    }
+function dividir(den, num) {
+    return den === 0 ? 'No se puede dividir por 0' : num / den;
 }
 console.log(dividir(7, 2));
 console.log(dividir(0, 2));
 // ejercicio 7
-function salarioFn(horas, vdh) {
+function salarioFn(horas, valorDeHora) {
     var extraMoney = 0;
     var extraHours = horas - 40;
     var baseSalary = 0;
     var totalSalary = baseSalary;
     if (extraHours > 0) {
-        extraMoney = extraHours * (vdh * 1.5);
-        baseSalary = 40 * vdh;
+        extraMoney = extraHours * (valorDeHora * 1.5);
+        baseSalary = 40 * valorDeHora;
         totalSalary = baseSalary + extraMoney;
     }
     else if (horas <= 40) {
-        totalSalary = horas * vdh;
+        totalSalary = horas * valorDeHora;
     }
-    return "salario ".concat(baseSalary, ", horas extra ").concat(extraHours, ", recargo por horas extra ").concat(vdh * 1.5, ", $total recargo por horas extra ").concat(extraMoney, ", Total devengado ").concat(totalSalary);
+    return "salario ".concat(baseSalary, ", horas extra ").concat(extraHours, ", recargo por horas extra ").concat(valorDeHora * 1.5, ", total recargo por horas extra ").concat(extraMoney, ", Total devengado ").concat(totalSalary);
 }
 console.log(salarioFn(45, 2000));
 // ejercicio 8

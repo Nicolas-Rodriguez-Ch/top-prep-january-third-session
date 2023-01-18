@@ -1,12 +1,8 @@
 // ejercicio 6
 
-function dividir(num1: number, num2: number): any {
-    if(num1 === 0) {
-      return 'No se puede dividir por 0';
-    } else {
-      return num2 / num1;
-    }
-  }
+function dividir(den: number, num: number): any {
+  return den === 0 ? 'No se puede dividir por 0': num / den;
+}
   
   console.log(dividir(7,2));
   console.log(dividir(0,2));
