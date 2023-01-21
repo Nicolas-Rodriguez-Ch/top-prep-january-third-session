@@ -22,6 +22,15 @@ function salarioFn(horas, valorDeHora) {
 }
 console.log(salarioFn(45, 2000));
 // ejercicio 8
+var asistentes = ['Gina', 'Juan', 'Luz', 'Michael'];
+var asistencia = [true, false, true, true];
+function listarAsistencia(asistentes, asistencia) {
+    for (var i in asistentes) {
+        var asistio = asistencia[i];
+        console.log("".concat(asistentes[i]).concat(asistio ? ' asistio' : ' no asistio'));
+    }
+}
+listarAsistencia(asistentes, asistencia);
 // ejercicio 9
 var pedro = {
     nombre: 'Pedro',

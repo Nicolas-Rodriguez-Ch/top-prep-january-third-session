@@ -1,6 +1,6 @@
 // ejercicio 6
 
-function dividir(den: number, num: number): any {
+function dividir(den: number, num: number): number | string {
   return den === 0 ? 'No se puede dividir por 0': num / den;
 }
   
@@ -8,7 +8,7 @@ function dividir(den: number, num: number): any {
   console.log(dividir(0,2));
 
 // ejercicio 7
-function salarioFn(horas: number, valorDeHora: number): any {
+function salarioFn(horas: number, valorDeHora: number): string {
     let extraMoney = 0;
     let extraHours = horas - 40;
     let baseSalary = 0;
@@ -26,6 +26,16 @@ function salarioFn(horas: number, valorDeHora: number): any {
   console.log(salarioFn(45,2000));
   
 // ejercicio 8
+const asistentes = ['Gina', 'Juan', 'Luz', 'Michael'];
+const asistencia = [true, false, true, true];
+
+function listarAsistencia(asistentes: string[], asistencia: boolean[]) {
+  for (const i in asistentes) {
+      const asistio = asistencia[i];
+      console.log( `${asistentes[i]}${asistio ? ' asistio': ' no asistio'}`)
+    }
+  }
+listarAsistencia(asistentes, asistencia)
 
 // ejercicio 9
 const pedro = {
@@ -46,8 +56,8 @@ for (const llave in pedro) {
 
 
 // ejercicio 10
-function english(arr:any[]):any {
-    let result :any[] = []
+function english(arr:any[]):string {
+    let result :string[] = []
     for (let i = 0; i < arr.length; i++) {
         for (let j = 0; j < arr[i].idiomas.length; j++) {
             if(arr[i].idiomas[j] === "EN") {
